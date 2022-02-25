@@ -1,0 +1,17 @@
+#header {
+    background-color: darkblue;
+    color: white;
+}
+
+#city {
+    border: 2px solid #999;
+}
+
+#forecast {
+    border: 2px solid #999;
+}
+
+#day {
+    background-color: navy;
+    color: white;
+}
