@@ -24,27 +24,23 @@
                     <div class="container-fluid">
                         <a class="navbar-brand">Search for a city:</a>
                         <form class="d-flex">
-                            <input class="form-control me-2" id="citySearch" type="search" placeholder="Search" aria-label="San Diego" required>
+                            <input class="form-control me-2" id="citySearch" type="search" placeholder="City, State" aria-label="San Diego" required>
                             <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
                         </form>
                     </div>
                 </nav>
                 <!-- City History -->
                 <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action" aria-current="true">The current city</button>
-                    <button type="button" class="list-group-item list-group-item-action">A second city</button>
-                    <button type="button" class="list-group-item list-group-item-action">A third city</button>
-                    <button type="button" class="list-group-item list-group-item-action">A fourth city</button>
-                    <button type="button" class="list-group-item list-group-item-action">A fifth city</button>
-                    <button class="btn btn-outline-success" id="clear" class="clear-results">Clear List</button>
+                    <ul class="list-group text-white" id="cityHistory"></ul>
                 </div>
+                <button class="btn btn-outline-success" id="clearHistory" class="clear-results">Clear List</button>
             </div>
             
             <div class="col-sm-9">
                 <!-- City Data -->
                 <div class="row mb-3">
                     <div id="city" class="p-2">
-                        <h1>City (DD/MM/YYYY) weather logo</h1>
+                        <h1><span id="thisCity">City</span> (DD/MM/YYYY) weather logo</h1>
                         <p>Temp:</p>
                         <p>Wind:</p>
                         <p>Humidity:</p>
