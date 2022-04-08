@@ -1,7 +1,6 @@
 // City Search and History
 var formSubmit = $("#searchBtn");
 var historyEl = $("#cityHistory");
-var clearBtn = $("#clearHistory");
 
 //Local Storage
 var searchedCities = JSON.parse(localStorage.getItem("search")) || [];
@@ -9,7 +8,9 @@ console.log(searchedCities);
 
 
 $(document).ready(function(){
+    //Start with Forecast Section Hidden
     $("#forecast").hide();
+    //currentWeather and futureForecast functions for API calls
     currentWeather(searchedCities[searchedCities.length-1])
     futureForecast(searchedCities[searchedCities.length-1]);
 });
@@ -31,22 +32,15 @@ $(formSubmit).on("click",function(event){
     event.preventDefault(); //prevent bubbling
     location = searchLocation.val().trim(); //clean off white space
     console.log(location);
+        // API calls
         currentWeather(location);
         futureForecast(location);
-
+        // Display Forecast Section
         $("#forecast").show();
-        
         // Add Cities to Local Storage
         searchedCities.push(location);
         localStorage.setItem("search",JSON.stringify(searchedCities));
         getSearchedCities();
-});
-
-// Clear 
-$(clearBtn).on("click",function(){
-    localStorage.removeItem("search");
-    document.location.reload();
-    getSearchedCities();
 });
 
 getSearchedCities();
