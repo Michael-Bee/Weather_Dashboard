@@ -1,8 +1,19 @@
 // City Search and History
 var formSubmit = $("#searchBtn");
-var historyEl = $("#cityHistory");
+var cityHistoryEl = $("#cityHistory");
+
+// API data variables and IDs
+var currentLocation = $("#currentLocation");
+var currentTemp = $("#temperature");
+var currentFeels = $("#feels-like");
+var currentMax = $("#temp-max");
+var currentMin = $("#temp-min");
+var currentPressure = $("#pressure");
+var currentHumidity = $("#humidity");
+var currentWindSpeed = $("#wind-speed");
 
 //Local Storage
+var cityArray = [];
 var searchedCities = JSON.parse(localStorage.getItem("search")) || [];
 console.log(searchedCities);
 
@@ -14,7 +25,6 @@ $(document).ready(function(){
     currentWeather(searchedCities[searchedCities.length-1])
     futureForecast(searchedCities[searchedCities.length-1]);
 });
-
 
 function find(l) {
     for (var i = 0; i < cityArray.length; i++){
@@ -43,17 +53,73 @@ $(formSubmit).on("click",function(event){
         getSearchedCities();
 });
 
+var APIKey = "100d149c99cc6626f466a0c725f37509";
+
+//Current WeatherAPI Call
+function currentWeather(location) {
+    var requestedURL = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial&appid=" + APIKey;
+
+    fetch(requestedURL)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+        var lon = data.coord.lon
+        var lat = data.coord.lat
+        var lastURL ="https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIKey;
+
+    fetch(lastURL)
+        .then(function(mike){
+            return mike.json();})
+
+            if (lastURL.cod==200) {
+                sCity=JSON.parse(localStorage.getItem("locationName"));
+                console.log(sCity);
+                if (sCity==null) {
+                    sCity=[];
+                    sCity.push(location.toUpperCase());
+                    localStorage.setItem("locationName",JSON.stringify(sCity));
+                    addToList(location);
+                }else{
+                    if (find(location)>0){
+                        sCity.push(location.toUpperCase());
+                        localStorage.setItem("locationName",JSON.stringify(sCity));
+                        addToList(location);
+                    }
+                }
+            }
+
+            if(data.cod===200) {
+                searchLocation=JSON.parse(localStorage.getItem("locationName"));
+                console.log(searchLocation);
+                if (searchLocation === null) {
+                    searchLocation=[];
+                    searchLocation.push(location.toUpperCase()
+                    );
+                    localStorage.setItem("locationName",JSON.stringify(searchLocation));
+                    addToList(location);
+                }else{
+                    if(find(location)>0){
+                        searchLocation.push(location.toUpperCase());
+                        localStorage.setItem("locationName",JSON.stringify(searchLocation));
+                        addToList(location);
+                    }
+                }
+            };
+        });
+    };
+
+
 getSearchedCities();
 if (searchedCities.length > 0){
     currentWeather(searchedCities[searchedCities.length]);
     futureForecast(searchedCities[searchedCities.length]);
 };
 
-// Reload City from Local Storage
+// Create List of Searched Cities from Local Storage
 function getSearchedCities(){
-    historyEl.html("");
+    cityHistoryEl.html("");
     for (var i = 0; i < searchedCities.length;i++){
-        
         var cityLink = document.createElement("input");
         cityLink.setAttribute("type","text");
         cityLink.setAttribute("readonly",true);
@@ -61,7 +127,7 @@ function getSearchedCities(){
         cityLink.setAttribute("value",searchedCities[i]);
         cityLink.addEventListener("click",function(){
             currentWeather(cityLink.value);
-        })
-        historyEl.append(cityLink);
-    }
+        });
+        cityHistoryEl.append(cityLink);
+    };
 }
