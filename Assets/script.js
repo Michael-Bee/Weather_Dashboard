@@ -3,14 +3,12 @@ var formSubmit = $("#searchBtn");
 var cityHistoryEl = $("#cityHistory");
 
 // API data variables and IDs
-var currentLocation = $("#currentLocation");
+var thisCity = $("#thisCity");
 var currentTemp = $("#temperature");
-var currentFeels = $("#feels-like");
-var currentMax = $("#temp-max");
-var currentMin = $("#temp-min");
-var currentPressure = $("#pressure");
+var currentMax = $("#tempHigh");
+var currentMin = $("#tempLow");
+var currentWindSpeed = $("#windSpeed");
 var currentHumidity = $("#humidity");
-var currentWindSpeed = $("#wind-speed");
 
 //Local Storage
 var cityArray = [];
@@ -21,7 +19,7 @@ console.log(searchedCities);
 $(document).ready(function(){
     //Start with Forecast Section Hidden
     $("#forecast").hide();
-    //currentWeather and futureForecast functions for API calls
+    //Reset currentWeather and futureForecast functions for API calls
     currentWeather(searchedCities[searchedCities.length-1])
     futureForecast(searchedCities[searchedCities.length-1]);
 });
