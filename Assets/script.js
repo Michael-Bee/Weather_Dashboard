@@ -146,7 +146,7 @@ function getSearchedCities(){
         var cityLink = document.createElement("input");
         cityLink.setAttribute("type","text");
         cityLink.setAttribute("readonly",true);
-        cityLink.setAttribute("class", "form-control d-block bg-white");
+        cityLink.setAttribute("class", "form-control d-block bg-white mt-2");
         cityLink.setAttribute("value",searchedCities[i]);
         cityLink.addEventListener("click",function(){
             currentWeather(cityLink.value);

@@ -4,14 +4,14 @@
 }
 
 #city {
-    border: 2px solid #999;
+    border: 2px solid orange;
 }
 
 #forecast {
-    border: 2px solid #999;
+    border: 2px solid orange;
 }
 
 #day {
-    background-color: navy;
+    background-color: rgb(1, 1, 100);
     color: white;
 }
