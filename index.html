@@ -25,7 +25,7 @@
                     <div class="container-fluid">
                         <a class="navbar-brand">Search for a city:</a>
                         <form class="d-flex">
-                            <input class="form-control me-2" id="citySearch" type="search" placeholder="City, State" aria-label="San Diego" required>
+                            <input class="form-control me-2" id="citySearch" type="search" placeholder="City" aria-label="City" required>
                             <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
                         </form>
                     </div>
@@ -42,11 +42,11 @@
                 <div class="row mb-3">
                     <div id="city" class="p-2">
                         <h1><span id="thisCity"></span></h1>
-                        <p>Current Temp:<span id="temperature"></span></p>
-                        <p>High:<span id="tempHigh"></span></p>                        
-                        <p>Low:<span id="tempLow"></span></p>
-                        <p>Wind Speed:<span id="#windSpeed"></span></p>
-                        <p>Humidity:<span id="#humidity"></span></p>
+                        <p>Current Temp: <span id="temperature"></span></p>
+                        <p>High: <span id="tempHigh"></span></p>                        
+                        <p>Low: <span id="tempLow"></span></p>
+                        <p>Wind Speed: <span id="windSpeed"></span></p>
+                        <p>Humidity: <span id="humidity"></span></p>
                     </div>
                 </div>
                 <!-- 5-Day Forecast -->
@@ -55,39 +55,49 @@
                         <h1>5-Day Forecast:</h1>
                         <div class="row justify-content-around">
                             <div id="day" class="col-sm-2 m-1 p-2">
-                                <h4><span id="futureDate0"></span></h4>
-                                <p id="futureImg0"></p>
-                                <p>Temp: <span id="futureTemp0"></span></p>
-                                <p>Wind: </p>
-                                <p>Humidity: <span id="futureHumidity0"></span></p>
+                                <h4><span id="forecastDate1"></span></h4>
+                                <p id="forecastImg1"></p>
+                                <p>Temp</p>
+                                <p>High: <span id="forecastTempMax1"></span></p>
+                                <p>Low: <span id="forecastTempMin1"></span></p>
+                                <p>Wind: <span id="forecastWind1"></span></p>
+                                <p>Humidity: <span id="forecastHumidity1"></span></p>
                             </div>
                             <div id="day" class="col-sm-2 m-1 p-2">
-                                <h4><span id="futureDate1"></span></h4>
-                                <p id="futureImg1"></p>
-                                <p>Temp: <span id="futureTemp1"></span></p>
-                                <p>Wind: </p>
-                                <p>Humidity: <span id="futureHumidity1"></span></p>
+                                <h4><span id="forecastDate2"></span></h4>
+                                <p id="forecastImg2"></p>
+                                <p>Temp</p>
+                                <p>High: <span id="forecastTempMax2"></span></p>
+                                <p>Low: <span id="forecastTempMin2"></span></p>
+                                <p>Wind: <span id="forecastWind2"></span></p>
+                                <p>Humidity: <span id="forecastHumidity2"></span></p>
                             </div>
                             <div id="day" class="col-sm-2 m-1 p-2">
-                                <h4><span id="futureDate2"></span></h4>
-                                <p id="futureImg2"></p>
-                                <p>Temp: <span id="futureTemp2"></span></p>
-                                <p>Wind: </p>
-                                <p>Humidity: <span id="futureHumidity2"></span></p>
+                                <h4><span id="forecastDate3"></span></h4>
+                                <p id="forecastImg3"></p>
+                                <p>Temp</p>
+                                <p>High: <span id="forecastTempMax3"></span></p>
+                                <p>Low: <span id="forecastTempMin3"></span></p>
+                                <p>Wind: <span id="forecastWind3"></span></p>
+                                <p>Humidity: <span id="forecastHumidity3"></span></p>
                             </div>
                             <div id="day" class="col-sm-2 m-1 p-2">
-                                <h4><span id="futureDate3"></span></h4>
-                                <p id="futureImg3"></p>
-                                <p>Temp: <span id="futureTemp3"></span></p>
-                                <p>Wind: </p>
-                                <p>Humidity: <span id="futureHumidity3"></span></p>
+                                <h4><span id="forecastDate4"></span></h4>
+                                <p id="forecastImg4"></p>
+                                <p>Temp</p>
+                                <p>High: <span id="forecastTempMax4"></span></p>
+                                <p>Low: <span id="forecastTempMin4"></span></p>
+                                <p>Wind: <span id="forecastWind4"></span></p>
+                                <p>Humidity: <span id="forecastHumidity4"></span></p>
                             </div>
                             <div id="day" class="col-sm-2 m-1 p-2">
-                                <h4><span id="futureDate4"></span></h4>
-                                <p id="futureImg4"></p>
-                                <p>Temp: <span id="futureTemp4"></span></p>
-                                <p>Wind: </p>
-                                <p>Humidity: <span id="futureHumidity4"></span></p>
+                                <h4><span id="forecastDate5"></span></h4>
+                                <p id="forecastImg5"></p>
+                                <p>Temp</p>
+                                <p>High: <span id="forecastTempMax5"></span></p>
+                                <p>Low: <span id="forecastTempMin5"></span></p>
+                                <p>Wind: <span id="forecastWind5"></span></p>
+                                <p>Humidity: <span id="forecastHumidity5"></span></p>
                             </div>
                         </div>
                     </div>
