@@ -1,90 +1,99 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Dashboard [![The MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-## Your Task
+---
+---
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Table of Contents:
+1. [Authors](#authors)
+2. [Links](#links)
+3. [Screenshots](#screenshot)
+4. [Description](#description)
+5. [Technologies](#technologies)
+6. [Installation](#installation)
+7. [Usage](#usage)
+8. [Contribution](#contribution)
+9. [Testing](#testing)
+10. [Questions](#contact)
+11. [License](#license)
+---
+## <span id="authors">Authors:</span>
+### Michael Bee
 
-Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
 
-## User Story
+## <span id="links">Links:</span>
+GitHub Repository: https://github.com/Michael-Bee/Weather_Dashboard
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
 
-## Acceptance Criteria
+## <span id="screenshot">Screenshot:</span>
+![Weather Dashboard Screenshot](Assets/Weather_Dashboard_Screenshot.png)
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
 
-## Mock-Up
+## <span id="description">Description:</span>
+A weather dashboard that provides current weather and a 5-day forecast.
 
-The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+## <span id="technologies">Technologies:</span>
+* HTML
+* Bootstrap
+* CSS
+* Javascript/jQuery
+* OpenWeather API
 
-## Grading Requirements
+## <span id="installation">Installation:</span>
+1. Clone the remote repository from GitHub
+2. Open index.html in browser
 
-This homework is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
+## <span id="usage">Usage:</span>
+* Enter a city in the search form and submit by clicking Search button. The current weather and a 5-day forecast will display to the right.
 
-* Satisfies all of the above acceptance criteria plus the following:
 
-    * Uses the OpenWeather API to retrieve weather data.
+## <span id="contribution">Contribution:</span>
+1. Fork the repository on GitHub
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request on GitHub
 
-    * Uses `localStorage` to store persistent data.
 
-### Deployment: 32%
+## <span id="testing">Testing:</span>
 
-* Application deployed at live URL.
 
-* Application loads with no errors.
 
-* Application GitHub URL submitted.
+## <span id="contact">Questions:</span>
+Email: Bee.Michael.02@gmail.com
 
-* GitHub repository that contains application code.
+GitHub: https://github.com/Michael-Bee
 
-### Application Quality: 15%
+Please contact with any questions.
 
-* Application user experience is intuitive and easy to navigate.
+---
+---
 
-* Application user interface style is clean and polished.
+## <span id="license">License:</span>
+### The MIT License
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+https://opensource.org/licenses/MIT
 
-### Repository Quality: 13%
+Copyright (c) [2022] [Michael Bee]
 
-* Repository has a unique name.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Repository follows best practices for file structure and naming conventions.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+---
+---
